@@ -1,6 +1,8 @@
 <template>
     <div class="chat container">
         <h2 class="teal-text"> Chat Room </h2>
+        <p class='teal-text'>تحياتي لي بيل جيتس وستيف جوبز والصحبه الكريمه</p>
+        <img src="../assets/img.jpg" alt="">
         <div class="card">
             <div class="card-content">
                 <ul class="messages" v-chat-scroll>
@@ -60,9 +62,24 @@ export default {
         flex-direction: column;
         align-items: center
     }
+    img {
+        width: 50%;
+        margin-bottom: 1em
+    }
+    @media (max-width: 767px) {
+        img {
+            width: 80%;
+        }
+    }
+    p {
+        margin-top: 0;
+        font-size: 1.5em;
+        text-align: center;
+    }
     .chat h2 {
         text-transform: capitalize;
         font-size: 2.6em;
+        margin-bottom: .3em;
     }
     .card {
         width: 100%
@@ -79,7 +96,7 @@ export default {
         font-size: .8em
     }
     .messages {
-        max-height: 60vh;
+        max-height: 28vh;
         overflow: auto;
     }
     .messages::-webkit-scrollbar {
@@ -93,6 +110,11 @@ export default {
     .messages::-webkit-scrollbar-thumb {
         background: #aaa;
         border-radius: 5px
+    }
+    @media (max-width: 767px) {
+        .messages {
+            max-height: 40vh;
+        }
     }
     li {
         margin-bottom: 1em;
